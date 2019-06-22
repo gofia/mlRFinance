@@ -2,6 +2,7 @@
 #include <RcppParallel.h>
 
 
+
 // [[Rcpp::depends(RcppParallel)]]
 using namespace RcppParallel;
 
@@ -24,7 +25,7 @@ struct SquareRoot : public Worker {
     std::transform(input.begin() + begin,
                    input.begin() + end,
                    output.begin() + begin,
-                 ::sqrt);
+                 sqrt);
   }
 };
 
