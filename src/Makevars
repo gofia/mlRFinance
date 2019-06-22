@@ -4,3 +4,5 @@ PKG_LIBS += $(shell ${R_HOME}/bin/Rscript -e "RcppParallel::RcppParallelLibs()")
 PKG_FFLAGS = $(F77_VISIBILITY)
 QP_FFLAGS = $(F77_VISIBILITY) $(FPICFLAGS) $(SAFE_FFLAGS) $(SHLIB_FFLAGS)
 all: $(SHLIB)
+CC=clang
+CXX=/opt/local/bin/c++-mp-4.6
