@@ -40,7 +40,7 @@ Rcpp::NumericMatrix parallelMatrixSqrt(Rcpp::NumericMatrix x) {
   SquareRoot1 squareRoot1(x, output);
 
   // call parallelFor to do the work
-  parallelFor(0, x.length(), squareRoot);
+  parallelFor(0, x.length(), squareRoot1);
 
   // return the output matrix
   return output;
