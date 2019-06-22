@@ -25,7 +25,7 @@ struct SquareRoot : public Worker
     std::transform(input.begin() + begin,
                    input.begin() + end,
                    output.begin() + begin,
-                 std::sqrt()
+                 std::sqrt(size_t)
                    );
 
   }
