@@ -25,7 +25,8 @@ struct SquareRoot : public Worker
     std::transform(input.begin() + begin,
                    input.begin() + end,
                    output.begin() + begin,
-                   ::sqrt);
+                   static_cast<int(*)(int)>(std::sqrt)
+                   );
 
   }
 };
