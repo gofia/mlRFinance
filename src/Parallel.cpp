@@ -1,7 +1,7 @@
 #include <RcppParallel.h>
 #include <Rcpp.h>
 // [[Rcpp::depends(RcppParallel)]]
-//using namespace RcppParallel;
+using namespace RcppParallel;
 
 
 
@@ -22,7 +22,7 @@ struct SquareRoot : public Worker
 
   // take the square root of the range of elements requested
   void operator()(std::size_t begin, std::size_t end) {
-    std::transform(input.begin() + begin,
+    transform(input.begin() + begin,
                    input.begin() + end,
                    output.begin() + begin,
                    ::sqrt);
@@ -75,7 +75,7 @@ inline double kl_divergence(InputIterator1 begin1, InputIterator1 end1,
     double d1 = *it1++;
     double d2 = *it2++;
 
-    // accumulate if appropirate
+    // accumulate if appropriate
     if (d1 > 0 && d2 > 0)
       rval += std::log(d1 / d2) * d1;
   }
