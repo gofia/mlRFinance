@@ -20,19 +20,19 @@ Depends:
     doParallel
     parallel
     boot
-LinkingTo: Rcpp RcppArmadillo RcppParallel RcppEigen RcppProgress
+LinkingTo: Rcpp, RcppArmadillo, RcppParallel, RcppEigen, RcppProgress
 Imports:
-    Rcpp
-    RcppEigen
-    RcppArmadillo
-    RcppParallel
-    RcppProgress
-    foreach
-    doParallel
-    parallel
-    doSNOW
-    iterators
-    Matrix
+    Rcpp,
+    RcppEigen,
+    RcppArmadillo,
+    RcppParallel,
+    RcppProgress,
+    foreach,
+    doParallel,
+    parallel,
+    doSNOW,
+    iterators,
+    Matrix,
     boot
 Suggests: testthat
 SystemRequirements: GNU make
