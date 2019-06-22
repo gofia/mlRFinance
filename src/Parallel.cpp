@@ -16,7 +16,7 @@ struct SquareRoot : public Worker {
   RMatrix<double> output;  // destination matrix
 
   // initialize with source and destination
-  SquareRoot(const Rcpp::NumericMatrix input, Rcpp::NumericMatrix output)
+  SquareRoot(const NumericMatrix input, NumericMatrix output)
     : input(input), output(output) {}
 
   // take the square root of the range of elements requested
