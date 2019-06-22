@@ -1,9 +1,9 @@
-/#include <Rcpp.h>
 #include <RcppParallel.h>
+#include <Rcpp.h>
 
 // [[Rcpp::depends(RcppParallel)]]
 using namespace RcppParallel;
-
+using namespace Rcpp;
 
 
 /********************************************************************************************************/
