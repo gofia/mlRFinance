@@ -7,10 +7,7 @@ Maintainer: Pedro Albuquerque <pedroa@unb.br>
 Description: Machine Learning functions applied to Finance <http://lamfo.unb.br/>
 Depends: 
     R (>= 3.1.0) ,
-    Matrix
-License: What license is it under?
-LazyData: TRUE
-Depends:
+    Matrix ,
     Rcpp ,
     RcppArmadillo ,
     RcppParallel ,
@@ -20,6 +17,8 @@ Depends:
     doParallel ,
     parallel ,
     boot
+License: What license is it under?
+LazyData: TRUE
 LinkingTo: Rcpp , RcppArmadillo , RcppParallel , RcppEigen , RcppProgress
 Imports:
     Rcpp ,
