@@ -22,7 +22,7 @@ struct SquareRoot : public Worker
 
   // take the square root of the range of elements requested
   void operator()(std::size_t begin, std::size_t end) {
-    transform(input.begin() + begin,
+    std::transform(input.begin() + begin,
                    input.begin() + end,
                    output.begin() + begin,
                    ::sqrt);
