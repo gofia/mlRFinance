@@ -6,33 +6,33 @@ Author: Pedro Albuquerque
 Maintainer: Pedro Albuquerque <pedroa@unb.br>
 Description: Machine Learning functions applied to Finance <http://lamfo.unb.br/>
 Depends: 
-    R (>= 3.1.0),
+    R (>= 3.1.0) ,
     Matrix
 License: What license is it under?
 LazyData: TRUE
 Depends:
-    Rcpp
-    RcppArmadillo
-    RcppParallel
-    RcppEigen
-    RcppProgress
-    foreach
-    doParallel
-    parallel
+    Rcpp ,
+    RcppArmadillo ,
+    RcppParallel ,
+    RcppEigen ,
+    RcppProgress ,
+    foreach ,
+    doParallel ,
+    parallel ,
     boot
-LinkingTo: Rcpp, RcppArmadillo, RcppParallel, RcppEigen, RcppProgress
+LinkingTo: Rcpp , RcppArmadillo , RcppParallel , RcppEigen , RcppProgress
 Imports:
-    Rcpp,
-    RcppEigen,
-    RcppArmadillo,
-    RcppParallel,
-    RcppProgress,
-    foreach,
-    doParallel,
-    parallel,
-    doSNOW,
-    iterators,
-    Matrix,
+    Rcpp ,
+    RcppEigen ,
+    RcppArmadillo ,
+    RcppParallel ,
+    RcppProgress ,
+    foreach ,
+    doParallel ,
+    parallel ,
+    doSNOW ,
+    iterators ,
+    Matrix ,
     boot
 Suggests: testthat
 SystemRequirements: GNU make
