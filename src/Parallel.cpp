@@ -10,14 +10,14 @@ using namespace RcppParallel;
 /********************************************************************************************************/
 /***********************************         PARALLEL COMPUTATION     ***********************************/
 /********************************************************************************************************/
-struct SquareRoot : public Worker {
+struct SquareRoot1 : public Worker {
   
   const RMatrix<double> input; // source matrix
 
   RMatrix<double> output;  // destination matrix
 
   // initialize with source and destination
-  SquareRoot(const Rcpp::NumericMatrix input, Rcpp::NumericMatrix output)
+  SquareRoot1(const Rcpp::NumericMatrix input, Rcpp::NumericMatrix output)
     : input(input), output(output) {}
 
   // take the square root of the range of elements requested
@@ -37,7 +37,7 @@ Rcpp::NumericMatrix parallelMatrixSqrt(Rcpp::NumericMatrix x) {
   Rcpp::NumericMatrix output(x.nrow(), x.ncol());
 
   // SquareRoot functor (pass input and output matrixes)
-  SquareRoot squareRoot(x, output);
+  SquareRoot1 squareRoot1(x, output);
 
   // call parallelFor to do the work
   parallelFor(0, x.length(), squareRoot);
