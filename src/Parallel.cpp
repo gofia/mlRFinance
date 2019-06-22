@@ -10,7 +10,7 @@ using namespace RcppParallel;
 /********************************************************************************************************/
 /***********************************         PARALLEL COMPUTATION     ***********************************/
 /********************************************************************************************************/
-struct SquareRoot1 : public Worker {
+struct SquareRoot: public Worker {
   
   const RMatrix<double> input; // source matrix
 
