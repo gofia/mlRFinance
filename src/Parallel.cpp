@@ -9,13 +9,11 @@ using namespace RcppParallel;
 /********************************************************************************************************/
 /***********************************         PARALLEL COMPUTATION     ***********************************/
 /********************************************************************************************************/
-struct SquareRoot : public Worker
-{
-  // source matrix
-  const RMatrix<double> input;
+struct SquareRoot : public Worker {
+  
+  const RMatrix<double> input; // source matrix
 
-  // destination matrix
-  RMatrix<double> output;
+  RMatrix<double> output;  // destination matrix
 
   // initialize with source and destination
   SquareRoot(const Rcpp::NumericMatrix input, Rcpp::NumericMatrix output)
@@ -26,8 +24,8 @@ struct SquareRoot : public Worker
     std::transform(input.begin() + begin,
                    input.begin() + end,
                    output.begin() + begin,
-                 std::sqrt)
-  };
+                 std::sqrt);
+  }
 };
 
 
