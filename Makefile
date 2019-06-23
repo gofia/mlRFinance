@@ -1,6 +1,4 @@
-CC=gcc-4.8 
-CXX=g++-4.8 
-LDFLAGS="-static-libgcc -static-libstdc++"
+CC=g++
 
 SRC = src
 TEST = test
