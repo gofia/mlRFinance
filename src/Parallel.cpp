@@ -1,6 +1,5 @@
 #include <Rcpp.h>
 #include <RcppParallel.h>
-#include <cmath>
 
 
 
@@ -18,15 +17,21 @@ struct SquareRoot: public Worker {
   RMatrix<double> output;  // destination matrix
 
   // initialize with source and destination
+  
+  
   SquareRoot(const Rcpp::NumericMatrix input, Rcpp::NumericMatrix output)
     : input(input), output(output) {}
-
+struct sqrt_wrapper {
+    public: double operator()(double a) {
+        return ::sqrt(a);
+    }
+};
   // take the square root of the range of elements requested
   void operator()(std::size_t begin, std::size_t end) {
     std::transform(input.begin() + begin,
                    input.begin() + end,
-                   output.begin() + begin,::
-                   sqrt);
+                   output.begin() + begin,
+                   sqrt_wrapper());
   }
 };
 
