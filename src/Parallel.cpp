@@ -1,5 +1,6 @@
 #include <Rcpp.h>
 #include <RcppParallel.h>
+#include <cmath>
 
 
 
@@ -21,11 +22,10 @@ struct SquareRoot: public Worker {
     : input(input), output(output) {}
 
   // take the square root of the range of elements requested
-  const auto sqrt= [](double c){ return std::sqrt(c); };
   void operator()(std::size_t begin, std::size_t end) {
     std::transform(input.begin() + begin,
                    input.begin() + end,
-                   output.begin() + begin,
+                   output.begin() + begin,::
                    sqrt);
   }
 };
